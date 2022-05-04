@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/store';
+import { deleteContact } from 'redux/action';
+import { getContacts, getFilter } from 'redux/selectors';
 import s from 'components/ContactsBook/ContactsBook.module.css'
 
 export default function ContactsBook() {
-  const contacts = useSelector(state => state.contacts.items);
-  const filter = useSelector(state => state.contacts.filter);
+  const contacts = useSelector(getContacts);
+  const filter = useSelector(getFilter);
 
   const dispatch = useDispatch();
 

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import {addContact} from 'redux/store'
+import {addContact} from 'redux/action'
 import s from "components/Phonebook/Phonebook.module.css";
 
 const Phonebook = () => {
